@@ -1,0 +1,40 @@
+/**<!--QUESTION 2a.Set alternate table row color using CSS. Use :nth-child(even) selector child element, 
+property background-color and value Light green-->**/
+
+tr:nth-child(even)
+{
+background-color: Lightgreen;
+}
+
+/**QUESTION 2b.Change the spacing between the cells and specify table borders using the padding and 
+border properties respectively**/
+
+th, td
+{
+padding: 10px;
+}
+
+table
+{
+border-spacing: 20px;
+} 
+
+
+/**<!--QUESTION 2c.Align the contents of the table in the center using text-align property-->**/
+
+th,td
+{
+text-align: center;
+}
+
+/*--Question 2d. Use the CSS pseudo classes :link and :visited to style visited and unvisited links differently**/
+a:link /*for unvisited links*/
+{
+color:blue;
+}
+
+a:visited /*for visited*/
+{
+color:red;
+}
+
