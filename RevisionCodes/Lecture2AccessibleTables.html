@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+         <title>Assessible Tables</title>
+    </head>
+     
+    <body>
+        <h2>The caption,th,colgroup and col Element</h2>
+    </body>
+
+
+    <!--caption element-->
+    <table border summary="This table is structured as four columns stage, distance,
+    the winner of the stage and the overall race leader at the end of the stage">
+
+    <caption>Stage winner in the 1903 Tour de France</caption>
+
+    <!--th element-->
+    <tr>
+    <th>Stage</th><th>Distance</th><th>Stage Winner</th><th>Overall Leader</th>
+    </tr>
+
+    <tr>
+        <td>Paris to Lyon</td>
+        <td>467km</td>
+        <td>Maurice Garin</td>
+        <td>Maurice Garin</td>
+    </tr>
+     
+    <tr>
+        <td>Lyon to Marseille</td>
+        <td>374km</td>
+        <td>Hippolyte Aucoturier</td>
+        <td>Maurice Garin</td>
+    </tr>
+
+    <tr>
+        <td>Marseille to Toulouse</td>
+        <td>423km</td>
+        <td>Hippolyte Aucoturier</td>
+        <td>Maurice Garin</td>
+    </tr>
+
+
+     <!--colgroup and col element-->
+    <colgroup>
+        <col span="3"/>
+        <col span="1" class="overall_winner"/>
+    </colgroup>
+
+    <tr>
+        <th>Route</th>
+    </tr>
+
+    </table>
+
+</html>
