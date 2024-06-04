@@ -1,0 +1,140 @@
+<?php
+
+            //Create the connection to the database
+            $servername="10.0.19.74";
+            $username="dit02023";
+            $password="dit02023";
+            $dbname="db_dit02023";
+
+            $conn=new mysqli($servername,$username,$password,$dbname);
+
+            //check the connection
+            if($conn->connect_error)
+            {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            echo "Connection successful!!";
+
+            //INSERTING INTO THE DATABASE
+            $stmt=$conn->prepare("INSERT INTO Test2(ID,testname) VALUES(?,?)");
+
+            $stmt->bind_param("sss",$id,$testname);
+
+            $id=$_POST["InsertID"];
+            $testname=$_POST["testname"];
+            $stmt->execute();
+
+            echo "Record successfully inserted";
+
+            $stmt->close();
+            $conn->close();
+         ?>
+          
+
+
+         <?php
+
+            //Create the connection to the database
+            $servername="10.0.19.74";
+            $username="dit02023";
+            $password="dit02023";
+
+            $conn=new mysqli($servername,$username,$password);
+
+            //check the connection
+            if($conn->connect_error)
+            {
+                die("Connection failed: " . $conn->connect_error);
+            }else{
+
+            echo "Connection successful!!";
+
+            //INSERTING INTO THE DATABASE
+            $stmt=$conn->prepare("DELETE FROM Test2 WHERE ID=$id");
+
+            $stmt->bind_param("sss",$id);
+
+            $id=$_POST["DeleteID"];
+            $stmt->execute();
+
+            echo "Record successfully deleted";
+
+            $stmt->close();
+            $conn->close();
+            }
+         ?>
+
+
+
+
+
+         <?php
+
+            //Create the connection to the database
+            $servername="10.0.19.74";
+            $username="dit02023";
+            $password="dit02023";
+            $dbname="db_dit02023"
+
+            $conn=new mysqli($servername,$username,$password);
+
+            //check the connection
+            if($conn->connect_error)
+            {
+                die("Connection failed: " . $conn->connect_error);
+            }else{
+
+            echo "Connection successful!!";
+
+            //INSERTING INTO THE DATABASE
+            $stmt=$conn->prepare("UPDATE Test2 SET testname=$testname WHERE id=$id");
+
+            $stmt->bind_param("sss",$id,$testname);
+
+            $id=$_POST["UpdateID"];
+            $testname=$_POST["Updatetestname"];
+            $stmt->execute();
+
+            echo "Record successfully updated";
+            }
+
+            $stmt->close();
+            $conn->close();
+         ?>
+
+
+
+         <p>RETRIEVING ALL RECORDS IN Test2 TABLE</p>
+         <?php
+
+            //Create the connection to the database
+            $servername="10.0.19.74";
+            $username="dit02023";
+            $password="dit02023";
+
+            $conn=new mysqli($servername,$username,$password);
+
+            //check the connection
+            if($conn->connect_error)
+            {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            echo "Connection successful!!";
+           
+           //RETRIEVIEVING ALL RECORDS
+           $sql="SELECT * FROM Test2";
+           $result=$conn->query($sql);
+
+           if($result->num_rows>0)
+           {
+            while($row=$result->fetch_assoc())
+            {
+                echo "ID: " . $row["ID"]. "Name: " . $row["testname"]. ;
+                <br>
+            }
+           }else{
+                  echo "O results";
+           }
+         ?>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSI315 LAB 8</title>
+        <meta charset="utf-8" author="Keletso Joy Ditlhotlhole-202002023" content="PHP and MySQL Lab">
+        <link rel="stylesheet" href="manage_database.css">
+        <h1>CSI315 LAB 8 </h1>
+    </head>
+
+    <body>
+
+        <p>ENTER YOUR DATA HERE IF YOU WANT TO INSERT</p>
+        <!--FORM TO INSERT DATA-->
+         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+             <label>ID:</label><br>
+             <input type="text" name="ID">
+             <br><br>
+
+             <label>Name:</label><br>
+             <input type="text" name="testname">
+             <br><br>
+
+             <input type="submit" name="Insert">
+             <br><br><hr>
+         </form>
+
+         
+         <p>ENTER THE ID YOU WANT TO DELETE</p>
+          <!--FORM TO DELETE DATA-->
+          <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+             <label>ID:</label><br>
+             <input type="text" name="DeleteID">
+             <br><br>
+
+             <input type="submit" name="Delete">
+             <br><br><hr>
+         </form>
+
+         
+        <p>ENTER THE ID YOU WANT TO UPDATE</p>
+        <!--FORM TO UPDATE DATA-->
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+             <label>ID:</label><br>
+             <input type="text" name="UpdateID">
+             <br><br>
+
+             
+             <label>Name:</label><br>
+             <input type="text" name="Updatetestname">
+             <br><br>
+
+
+             <input type="submit" name="Update">
+             <br><br><hr>
+         </form>
+
+         <h2>Delete Student Record(s)</h2>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+        Delete by:
+        ID: 
+        <input type="text" placeholder="ID" name="idDel">
+        
+        <br>--or--</br>
+        Name:
+        <input type="text" placeholder="Name" name="nameDel">
+
+        <input type="submit" value="Delete" name="delete">
+    </form>
+
+
+         <?php
+
+            //Create the connection to the database
+           $servername="10.0.19.74";
+           $username="dit02023";
+           $password="dit02023";
+           $dbname="db_dit02023";
+
+           $conn=new mysqli($servername,$username,$password,$dbname);
+
+           
+            //check the connection
+            if($conn->connect_error)
+            {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            echo "Connection successful!!";
+            
+            $conn->close();
+
+        // To populate the table
+        if($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["ID"])) {
+        $id = $_POST["ID"];
+        $testname = $_POST["testname"];
+    
+        $stmt = $conn->prepare("INSERT INTO Test2 (ID ,testname) VALUES(?,?)");
+        $stmt->bind_param("ss",$id,$testname);
+        $stmt->execute();
+        $stmt->close();
+        }
+
+       $conn->close();
+
+        ?>
+    </body>
+</html>
