@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" author="Keletso Joy Ditlhotlhole,202002023" content="LAB 4">
+
+    <!--used to allow the web designers to take control over viewport i.e. the users' visible are of the web page-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+   <!--FLUID IMAGES & BACKGROUND IMAGE-->
+    <style>
+      div {
+        width: 100%;
+        height: auto;
+        font-weight: bold;
+        background-image: url('actual.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px;
+       }
+    
+    </style>
+
+   <!--USED TO CREATE FLUID GRIDS-->
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: #2196F3;
+        padding: 5px;
+        column-gap: 50px;
+      }
+      
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 15px;
+        text-align: center;
+      }
+      </style>
+
+      <!--MEDIA QUERIES-->
+      <style>
+        @media screen and (min-width: 480px) {
+        body {
+            background-color: #dda15e;
+        }
+      }
+      </style>
+
+  </head>
+
+  
+  <body>
+
+    <!--HEADER-->
+    <div class="header">
+       <h1>Welcome to the Landing Page</h1>
+       <h2>We're a start-up that does something</h2>
+    </div>
+
+    
+    <!--NAVIGATION BAR-->
+    <nav>
+      <ul>
+      <li><a href="#">Link 1</a><a href="#">Link 2</a> <a href="#">Link 3</a></li>
+      </ul>
+        <br>
+    </nav>
+
+
+   <!--FOR FLUID GRIDS--> 
+    <div class="grid-container" >
+
+    <div class="grid-item"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+
+    <div class="grid-item"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+     
+    <!--FOR THE VIDEO WITH CONTROLS-->
+    <div class="grid-item">
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <video width="400" controls>
+        <source src="nature.mp4" type="video/mp4">
+        <source src="nature.ogg" type="video/ogg">
+        Your browser does not support HTML5 video.
+      </video>
+
+    </div>
+
+     </div>
+  </body>
+
+     
+  <br>
+  <br>
+
+
+  <h2>Sign up for our upcoming launch!</h2>
+  <form class="emailform" action="thankyou.html" method="get">
+
+     <!--LEGEND-->
+     <legend>Sign Up Details:</legend>
+     <br>
+
+    <label for="first">First Name:</label><br>
+    <input class="userinput" type="text" name="first" value=""><br>
+
+    <label for="last">Last Name:</label><br>
+    <input class="userinput" type="text" name="last" value=""><br>
+
+    <!--DATE OF BIRTH WITH LABEL-->
+    <label for="dateOfBirth">Date Of Birth:</label><br>
+    <input class="userinput" type="date" name="date" value=""><br>
+    
+
+    <label for="email">Email:</label><br>
+    <input class="userinput" type="email" name="email" value=""><br>
+
+    <input type="submit" id="sub" name="" value="Sign me up!">
+  </form>
+
+  <!--FOOTER-->
+  <div class="footer">
+    <h3>Thank you for checking out our page</h3>
+    <h5> By: Keletso Joy Ditlhotlhole</h5>
+    <p>copyright &copy</p>
+  </div>
+</html>
