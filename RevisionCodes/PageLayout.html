@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD-->
+
+
+    <body>
+
+        <!--FORM ELEMENTS page 13 FORMS-->
+    <fieldset>
+    <legend>Details</legend>
+    <form action="action_page.php">
+        <ol><li><label>Name:<br><input type="text" name="firstname"/> </label></li> 
+         <br>
+
+
+         <!--Implicit Declaration-->
+        <li><label>Last name:<br>
+        <input type="text" name="lastname"/></label></li>
+        <br><br>
+
+        <!--Explicit Declaration-->
+        <li><input type="" name="Trial" id="trial1"/></label></li>
+        <label for="trial1">Trial:</label> 
+        <br><br>
+
+        <!--Text Entry-->
+        <li><label>Text Entry:<br></label>
+        <input type="text" name="Text Entry" size="5" maxlength="10"/></li>
+        <br><br>
+
+        <!--BUTTONS-->
+        <input type="submit" value="Naomi"/>
+        </ol>
+
+        <!--TEXT AREA-->
+        <textarea name="Text Area" rows="20" cols="40">Hey</textarea>
+
+        <!--FORM CONTROLS-->
+
+        <!--CHECKBOX-->
+       <ol> <li><label>Form Controls:<br></label>
+            <input type="checkbox" name="Form Control" value="walking" checked="checked"/>
+
+        <li><label>Radio Buttons:<br></label>
+            Male:
+            <input type="radio" name="question1" value="male" checked="checked"/>
+            Female:
+            <input type="radio" name="question1" value="female" checked="checked"/>
+
+        
+
+        <!--SELECT MENUS-->
+        <!--DROP DOWN MENU-->
+        <li><label for="Country">Country:<br></label></li>
+        <select id="Country">
+            <option value="BW">Botswana</option>
+            <option value="NA">Namibia</option>
+            <option value="RSA">South Africa</option>
+        </select>
+
+        <!--SCROLLING MENU-->
+        <li><label for="Country">Country:<br></label></li>
+        <select id="Country" size="2" multiple="1">
+            <option value="BW">Botswana</option>
+            <option value="NA">Namibia</option>
+            <option value="RSA">South Africa</option>
+        </select>
+
+        <!--OPTGROUP-->
+        </ol>
+    </form>
+
+    </fieldset>
+
+
+</body>
+</html>
