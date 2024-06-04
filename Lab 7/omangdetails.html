@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSI315 LAB 7 Omang Details</title>
+        <meta charset="utf-8">
+        <h1>OMANG DETAILS</h1>
+    </head>
+
+    <body>
+        
+        <style>
+            body{
+                background-image:url("download.jpg");
+                background-repeat: no-repeat;
+                background-position:right;
+                background-color: lightblue;
+            }
+        </style>
+
+        <p>PLEASE ENTER YOUR OMANG DETAILS:</p>
+        <fieldset>
+            <legend>Omang Details</legend>
+        <form action="validate.php" method="post">
+            <ol>
+            <li><label>Forenames:<br>
+                <input type="text" name="forenames"/></label></li>
+                <br><br>
+
+            <li><label>Surname:<br>
+                <input type="text" name="surname"/></label></li>
+                <br><br>
+
+            <li><label>Date Of Birth:<br>
+                <input type="date" name="dateOfBirth"/></label></li>
+                <br><br>
+
+            <li><label>Place Of Birth:<br>
+                <input type="text" name="placeOfBirth"/></label></li>
+                <br><br>
+            
+            <li><label>Nationality:<br>
+                <input type="text" name="nationality"/></label></li>
+                <br><br>
+            
+            <li><label>Colour Of Eyes:<br>
+                <input type="text" name="colourOfEyes"/></label></li>
+                <br><br>
+
+            <li><label>Date Of Expiry:<br>
+                <input type="date" name="dateOfExpiry"/></label></li>
+                <br><br>
+
+            <li><label>Place Of Application<br>
+                <input type="text" name="placeOfApplication"/></label></li>
+                <br><br>
+            
+            <li><label>Gender:<br>
+            <select id="Gender">
+                <option value="F">Female</option>
+                <option value="M">Male</option>
+            </select>
+                <br><br>
+            
+            <li><label>IDNumber<br>
+                <input type="text" name="IDNumber"/></label></li>
+                <br><br>
+
+            
+            <input type="submit" value="Save"/>
+ 
+            </ol>
+            
+        </form>
+
+        </fieldset>
+    </body>
+</html>

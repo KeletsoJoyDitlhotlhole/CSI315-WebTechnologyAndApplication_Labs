@@ -1,0 +1,63 @@
+<?php
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  // Check if all fields are filled
+  if (empty($_POST["name"]) || empty($_POST["surname"]) || empty($_POST["id_number"]) || empty($_POST["gender"]) || empty($_POST["email"]) || empty($_POST["phone"])) {
+    echo "Please fill in all fields.";
+    exit;
+  }
+
+  // Sanitize and validate data
+  $name = test_input($_POST["name"]);
+  $surname = test_input($_POST["surname"]);
+  $id_number = test_input($_POST["id_number"]);
+  $gender = test_input($_POST["gender"]);
+  $email = test_input($_POST["email"]);
+  $phone = test_input($_POST["phone"]);
+
+  // Check if ID number is composed of exactly 9 digits and starts with "0" for male and "9" for female
+  if (strlen($id_number) != 9 || ($gender == "male" && $id_number[0] != "0") || ($gender == "female" && $id_number[0] != "9")) {
+    echo "Please enter a valid ID number.";
+    exit;
+  }
+
+  // Display confirmation page with submitted data
+  echo "Thank you for submitting the form. Here is your submitted data:<br>";
+  echo "Name: " . $name . "<br>";
+  echo "Surname: " . $surname . "<br>";
+  echo "ID number: " . $id_number . "<br>";
+  echo "Gender: " . $gender . "<br>";
+  echo "Email: " . $email . "<br>";
+  echo "Phone: " . $phone . "<br>";
+}
+
+// Sanitize and validate data function
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+?>
+
+
+
+
+
+
+
+
+    
+        $Forenames=test_input($_POST["Forenames"]);
+        $Surname=test_input($_POST["Surname"]);
+        $DateOfBirth=test_input($_POST["DateOfBirth"]);
+        $PlaceOfBirth=test_input($_POST["PlaceOfBirth"]);
+        $Nationality=test_input($_POST["Nationality"]);
+        $ColourOfEyes=test_input($_POST["ColourOfEyes"]);
+        $DateOfExpiry=test_input($_POST["DateOfExpiry"]);
+        $PlaceOfApplication=test_input($_POST["PlaceOfApplication"]);
+        $Gender=test_input($_POST["Gender"]);
+        $IDNumber=test_input($_POST["IDNumber"]);
