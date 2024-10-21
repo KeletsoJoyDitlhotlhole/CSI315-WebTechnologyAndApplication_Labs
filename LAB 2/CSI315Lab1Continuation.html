@@ -1,0 +1,137 @@
+<!DOCTYPE html><!--root element-->
+
+<html lang="en"><!--This attribute specifies the language used to write the document-->
+
+
+    <head>
+
+        <title>CSI315 Lab 2</title>
+        <meta charset="utf-8"/><!--Specify the character encoding for the HTML document-->
+        <meta name="Keletso Joy Ditlhotlhole,202002023" content="HTML5">
+
+        <!--QUESTION 4.Using internal style sheet format the table header so that its background color is set to coral.-->
+        <style type="text/css">
+            th{
+                background-color: coral;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>INTRODUCTION TO CSS(Continuation of Lab 1)</h1>
+    
+<!--Question 1a-->
+     <table border style="width: 100%;"> <!--QUESTION 3.Using embedded style sheet, format the table so it spans the entire screen using the width property-->
+
+        <colgroup>
+            <col span="2" style=background-color:red;>
+            <col style=background-color:yellow;>
+         </colgroup>
+
+        <tr>
+            <th colspan="3" style="background-color: white;">BOOKS</th>
+
+            <!--Question 1b-->
+            <td rowspan="4"> <img src="download.jpg" alt="School admin" width="100%" height="100%"></td>
+        </tr>
+
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>3476896</td>
+            <td><a href="">My first HTML</a></td><!--Question 1c added-->
+            <td>P53</td>
+        </tr>
+
+        <tr>
+            <td>5869207</td>
+            <td><a href="">My first CSS</a></td>    <!--Question 1c added-->
+            <td>P49</td>
+        </tr>
+
+        <tr>
+            <!--Question 1d-->
+            <th colspan="5" align="left" style="background-color: white;">
+
+                <ul>
+                    <li>You can meet new people from countries around the world</li>
+                    <li>You have access to new media as it becomes public:
+
+                    <ul>
+                        <li>New games</li>
+                        <li>New applications
+
+                            <ol>
+                                <li> For business </li>
+                                <li>For pleasure</li>
+                            </ol>
+                
+                        </li><!--ends line 18 new applications li -->
+                    </ul>
+                 
+                    <li>Keeping in touch with friends</li>
+                   
+                </ul>
+
+            </th>
+
+        </tr>
+
+        <!--QUESTION 2a.Set alternate table row color using CSS. Use :nth-child(even) selector child element, 
+                        property background-color and value Light green-->
+        <style>
+          tr:nth-child(even)
+         {
+            background-color: Lightgreen;
+         }
+        </style>
+     
+        <!--QUESTION 2b.Change the spacing between the cells and specify table borders using the padding and 
+                        border properties respectively-->
+        <style>
+            th, td
+            {
+               padding: 10px;
+            }
+
+            table
+            {
+                border-spacing: 20px;
+            } 
+        </style>
+
+        <!--QUESTION 2c.Align the contents of the table in the center using text-align property-->
+        <style>
+               th,td
+               {
+                text-align: center;
+               }
+        </style>
+
+        <!--Question 2d. Use the CSS pseudo classes :link and :visited to style visited and unvisited links differently-->
+        <style>
+            a:link /*for unvisited links*/
+            {
+              color:blue;
+            }
+
+            a:visited /*for visited*/
+            {
+                color:greenyellow;
+            }
+        </style>
+
+
+        
+
+    </table>
+   </body>
+
+</html>
+        
+        
