@@ -1,0 +1,72 @@
+body{
+  font-family: 'Montserrat';
+  color:black;
+  text-align: center;
+  background-color: #011627;
+  border: 60px solid #2EC4B6;
+  border-top: 0px;
+  /**border-bottom: 0px;**/
+  margin: 0px;
+
+  /** for inserting the background image*/
+  background-image: url("actual.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-color: #cccc;
+  filter:blur(0.5px);
+}
+
+p{
+  color: black;
+  padding-top: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+.userinput{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h2{
+  margin-bottom: 5%;
+}
+
+#sub{
+  border-radius: 25px;
+  background: #FF9F1C;
+  height: 80px;
+  width: 150px;
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  margin-bottom: 4px;
+}
+
+/*columns for the webpage*/
+/*used for fluid grids*/
+.col-1{width:8.33%}
+.col-2{width:16.66%}
+.col-3{width:25%}
+.col-4{width:33.33%}
+.col-5{width:41.66%}
+.col-6{width:50%}
+.col-7{width:58.33%}
+.col-8{width:66.66%}
+.col-9{width:75%}
+.col-10{width:83.33%}
+.col-11{width:95%}
+.col-12{width:100%}
+
+/*media queries*/
+@media only screen and (max-width: 250px) {
+  .img {
+    max-width: 100;
+    height:auto;
+  }
+}
+
+legend
+{
+  font-weight: bold;
+}
